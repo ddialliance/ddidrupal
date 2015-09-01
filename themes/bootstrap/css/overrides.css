@@ -276,6 +276,7 @@ margin-bottom: 0;
 .footer {
 background: #fff;
 text-align: center;
+margin-top: 10px;
 }
 .footer a,
 .footer a:link,
@@ -427,6 +428,15 @@ margin-top: 7px;
 margin-top: 1em;
 }
 
+table caption {
+text-align: left;
+font-size: 1.5em;
+
+}
+
+.table {
+border: 1px solid #ddd;
+}
 
 a[data-toggle="collapse"]:not(.collapsed):before {
 content: '- ';
@@ -451,9 +461,7 @@ margin-left: 10px;
 .pub_item {
 margin: 20px 0;
 }
-.form-item {
-    padding: 20px 0;
-}
+
 .form-item .email {
     display: block;
     width: 100%;
