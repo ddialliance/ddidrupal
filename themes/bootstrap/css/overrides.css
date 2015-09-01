@@ -480,3 +480,16 @@ margin: 20px 0;
 		margin: 0;
 	}
 }
+
+/* Extra styles for the Explore Documentation page. */
+
+.docu-version-container {
+  background-color: rgba(226,220,220,0.20);
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.docu-version-container-last {
+  margin-bottom: 40px;
+}
