@@ -515,3 +515,29 @@ margin: 20px 0;
 .well-padding {
   padding: 19px 20px;
 }
+
+.explore-docu-h2 {
+  text-align: center;
+}
+
+.explore-docu-more-link {
+  text-align: left;
+}
+
+.btn-online-field-level-docu {
+  background-color: #433B2A !important;
+}
+
+.btn-schema-entry-point {
+  text-align: center;
+  width: 231px;
+}
+
+.btn-download-documentation {
+  background-color: #054E72; width: 231px;
+}
+
+.clearfix {
+  clear: both;
+}
+
