@@ -488,3 +488,64 @@ margin: 20px 0;
 		margin: 0;
 	}
 }
+
+/* Extra styles for the Explore Documentation page. */
+
+.docu-version-container {
+  background-color: rgba(226,220,220,0.20);
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.docu-version-container-last {
+  margin-bottom: 40px;
+}
+
+.version-infobox-left {
+  background-color: #FFF;
+  border-right: 1px solid #DAD1D1;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.version-infobox-left-second-row {
+  margin-top: 20px;
+}
+
+.version-infobox-right {
+  background-color: #FFF;
+  border-left: 1px solid #DAD1D1;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.well-padding {
+  padding: 19px 20px;
+}
+
+.explore-docu-h2 {
+  text-align: center;
+}
+
+.explore-docu-more-link {
+  text-align: left;
+}
+
+.btn-online-field-level-docu {
+  background-color: #433B2A !important;
+}
+
+.btn-schema-entry-point {
+  text-align: center;
+  width: 231px;
+}
+
+.btn-download-documentation {
+  background-color: #054E72; width: 231px;
+}
+
+.clearfix {
+  clear: both;
+}
+
