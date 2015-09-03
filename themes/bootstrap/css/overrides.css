@@ -430,7 +430,7 @@ margin-top: 1em;
 
 table caption {
 text-align: left;
-font-size: 1.5em;
+font-size: 1.2em;
 
 }
 
@@ -549,3 +549,10 @@ margin: 20px 0;
   clear: both;
 }
 
+.view-membership-list .view-grouping-header {
+font-size: 1.5em;
+}
+
+.view-membership-list  td {
+width: 50%;
+}

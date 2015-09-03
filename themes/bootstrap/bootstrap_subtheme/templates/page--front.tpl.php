@@ -185,8 +185,8 @@
 
 <div class="col-md-3 button-box">
 <a class="ddi-orange-btn ddi-btn" href="/explore-documentation">
-<span class="fade-out"><i class="fa fa-download fa-5x"></i><br /><span class="ddi-btn-lg">Documentation</span></span>
-<span class="fade-in">Explore<br /> Documentation</span>
+<span class="fade-out"><i class="fa fa-download fa-5x"></i><br /><span class="ddi-btn-lg">Specification</span></span>
+<span class="fade-in">Explore<br /> Specification</span>
 </a>
 </div>
   		
@@ -282,7 +282,7 @@
   <?php print views_embed_view('ddi_projects_new','block_1'); ?>
   <br />
   <br />
-  <p class="more-link"><a href="/ddi-implementations" class="btn">View more adopters</a></p>
+  <p class="more-link"><a href="/ddi-adopters" class="btn">View more adopters</a></p>
 </div>
 </div>
   	
