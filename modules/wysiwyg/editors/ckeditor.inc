@@ -5,6 +5,10 @@
  * Editor integration functions for CKEditor.
  */
 
+define('WYSIWYG_CKEDITOR_ACF_DISABLED', 0);
+define('WYSIWYG_CKEDITOR_ACF_AUTOMATIC', 1);
+define('WYSIWYG_CKEDITOR_ACF_CUSTOM', 2);
+
 /**
  * Plugin implementation of hook_editor().
  */
@@ -147,6 +151,15 @@ function wysiwyg_ckeditor_settings_form(&$form, &$form_state) {
 }
 
 /**
+ * #element_validate handler for ACF Allowed Content element altered by wysiwyg_ckeditor_settings_form().
+ */
+function wysiwyg_ckeditor_settings_form_validate_allowed_content($element, &$form_state) {
+  if (_wysiwyg_ckeditor_settings_acf_is_obj($element['#value']) && json_decode($element['#value']) === NULL) {
+    form_error($element, t('Allowed content is not valid JSON.'));
+  }
+}
+
+/**
  * #element_validate handler for CSS classes element altered by wysiwyg_ckeditor_settings_form().
  */
 function wysiwyg_ckeditor_settings_form_validate_css_classes($element, &$form_state) {
@@ -230,6 +243,27 @@ function wysiwyg_ckeditor_settings($editor, $config, $theme) {
 
   if (isset($config['apply_source_formatting'])) {
     $settings['apply_source_formatting'] = $config['apply_source_formatting'];
+  }
+
+  // Advanced Content Filter
+  // http://docs.ckeditor.com/#!/guide/dev_advanced_content_filter
+  if (!isset($config['acf_mode']) || WYSIWYG_CKEDITOR_ACF_DISABLED == $config['acf_mode']) {
+    $settings['allowedContent'] = TRUE;
+  }
+  else {
+    if (_wysiwyg_ckeditor_settings_acf_is_obj($config['acf_allowed_content'])) {
+      $acf_content = json_decode($config['acf_allowed_content']);
+    }
+    else {
+      $acf_content = $config['acf_allowed_content'];
+    }
+
+    if (WYSIWYG_CKEDITOR_ACF_CUSTOM == $config['acf_mode']) {
+      $settings['allowedContent'] = $acf_content;
+    }
+    elseif (WYSIWYG_CKEDITOR_ACF_AUTOMATIC == $config['acf_mode']) {
+      $settings['extraAllowedContent'] = $acf_content;
+    }
   }
 
   if (isset($config['css_setting'])) {
