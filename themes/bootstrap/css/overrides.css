@@ -489,16 +489,18 @@ margin: 20px 0;
 	}
 }
 
-/* Extra styles for the Explore Documentation page. */
+/**
+ * Extra styles for Explore Documentation and Specification pages.
+ */
 
-.docu-version-container {
+.documentation-version-container {
   background-color: rgba(226,220,220,0.20);
   border-radius: 6px;
   margin-top: 20px;
   padding: 20px;
 }
 
-.docu-version-container-last {
+.documentation-version-container-last {
   margin-bottom: 40px;
 }
 
@@ -524,15 +526,17 @@ margin: 20px 0;
   padding: 19px 20px;
 }
 
-.explore-docu-h2 {
+.explore-documentation-h2 {
   text-align: center;
 }
 
-.explore-docu-more-link {
+.explore-documentation-more-link {
   text-align: left;
 }
 
-.btn-online-field-level-docu {
+/* Pls use the below button definitions together with p.more-link > a.btn */
+
+.btn-online-field-level-documentation {
   background-color: #433B2A !important;
 }
 
@@ -548,6 +552,8 @@ margin: 20px 0;
 .clearfix {
   clear: both;
 }
+
+/* END: Extra styles for Explore Documentation and Specification pages. */
 
 .view-membership-list .view-grouping-header {
 font-size: 1.5em;
